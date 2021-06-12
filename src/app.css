@@ -1,0 +1,143 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.score {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  margin: 20px;
+  border-radius: 50%;
+  background-color: white;
+  width: 3em;
+  height: 3em;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.moviecard {
+  z-index: 1;
+  width: 300px;
+  margin-right: 20px;
+  background: #ffffff;
+  border: 1px solid #e1e3e6;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  text-align: center;
+  height: auto;
+  margin: 20px auto;
+}
+.moviecard img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+h2 {
+  font-weight: 100;
+  font-family: 'Inter';
+}
+
+.header {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.borderBottom {
+  display: block;
+
+  border-bottom: 1px solid #c0c4cc;
+  margin: 2em 3em 0px 3em;
+}
+
+.modal {
+  font-family: Inter;
+  position: fixed;
+  left: 0%;
+  top: -1%;
+  display: flex;
+  background-color: white;
+  z-index: 2;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.close {
+  font-family: Inter;
+  position: sticky;
+  top: 8px;
+  left: 10em;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+div .modal-left {
+  padding: 4em;
+}
+
+input {
+  border: none;
+  height: 36px;
+  font-family: Inter;
+}
+h1 {
+  font-family: Inter;
+}
+
+.input {
+  background-color: white;
+}
+
+.modal-right{
+  margin-top: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: fixed;
+    width: 50%;
+    right: 5em;
+    height: auto;
+    top: 10em;
+    display: flex;
+    flex-direction: initial;
+      overflow: hidden;
+  }
+
+  .close{
+    position: absolute;
+    left: 31em;
+    font-family: Inter;
+  }
+
+  .modal-right{
+    margin-top: 0;
+  }
+
+  .header{
+    margin: 2em 3em 0px 3em;
+  }
+}

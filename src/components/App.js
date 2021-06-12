@@ -1,7 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
+import '../app.css';
+
+import {Dashboard} from './Dashboard';
 
 const App = () => (
-	<img src={logo} alt="Timescale" />
-)
+  <>
+    <Dashboard />
+  </>
+);
 
 export default App;
