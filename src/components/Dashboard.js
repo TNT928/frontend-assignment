@@ -4,6 +4,9 @@ import SearchBar from './SearchBar';
 import axios from 'axios';
 import '../app.css';
 import MovieList from './MovieList';
+import variable from '../variable'
+
+const key = variable.api.movieDBKey 
 
 export function Dashboard(props) {
   const [search, setSearch] = useState('');
@@ -21,7 +24,7 @@ export function Dashboard(props) {
     e.preventDefault();
     await axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=7315ec59ea2264da1fa4f4eb8d647853&language=en-US&page=1&include_adult=false&query=${search}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${search}`
       )
       .then((movie) => {
         setMovieResult(movie.data.results);
@@ -31,7 +34,7 @@ export function Dashboard(props) {
 
   const getLatestMovies = async () => {
     const results = await axios.get(
-      'https://api.themoviedb.org/3/movie/popular?api_key=7315ec59ea2264da1fa4f4eb8d647853&language=en-US&page=1'
+      `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`
     );
     setMovieResult(results.data.results);
   };
