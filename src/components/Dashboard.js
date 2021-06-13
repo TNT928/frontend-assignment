@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import axios from 'axios';
 import '../app.css';
 import MovieList from './MovieList';
-import variable from '../../variable'
+import variable from '../variable'
 
 const key = variable.api.movieDBKey 
 
